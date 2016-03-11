@@ -1,3 +1,4 @@
 class Article < ActiveRecord::Base
-  enum type: [:shirt, :sweater, :pants]
+  has_one :main_color
+  has_one :secondary_color
 end

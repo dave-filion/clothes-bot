@@ -1,0 +1,3 @@
+class ColorFn
+
+end

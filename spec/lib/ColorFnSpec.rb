@@ -1,0 +1,3 @@
+describe ColorFn do
+
+end

@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160306035248) do
+ActiveRecord::Schema.define(version: 20160311052338) do
 
-# Could not dump table "articles" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "colors", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "{:index=>true}_id"
+  end
+
+  create_table "outfit_pieces", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "outfits", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -23,6 +32,11 @@ ActiveRecord::Schema.define(version: 20160306035248) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "wardrobes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
